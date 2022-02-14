@@ -59,7 +59,6 @@ const createTalentBatch = async (req, res, next) => {
         taba_batch_id: parseInt(batch_id),
       });
     }
-
     return res.send(result);
   } catch (error) {
     return res.status(404).json({

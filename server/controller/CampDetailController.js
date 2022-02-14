@@ -8,7 +8,6 @@ const findAllRows = async (req, res, next) => {
 };
 
 const findRow = async (req, res) => {
-
   try {
     const curriculum = await req.context.models.curriculum.findOne({
       where: {curr_name: req.params.id },

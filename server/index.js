@@ -32,14 +32,6 @@ app.use(async (req,res,next) =>{
     next();
 });
 
-/*  app.use(process.env.URL_DOMAIN,(req,res)=>{
-    res.send("Hello Eshopay");
-});  */
-
-
-//auth.setMiddleware(app);
-
-
 // call routes
 app.use(config.URL_DOMAIN+"/auth",routes.UserRoute)
 app.use(config.URL_DOMAIN+"/bootcamp",routes.CampDetailRoute)
