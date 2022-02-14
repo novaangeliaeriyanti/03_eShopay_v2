@@ -7,7 +7,6 @@ import compress from 'compression';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import middleware  from "./helpers/middleware";
-
 //for access models to db
 import models,{sequelize} from "./models/init-models";
 import routes from './routes/IndexRoute'
@@ -44,6 +43,7 @@ app.use(async (req,res,next) =>{
 // call routes
 app.use(config.URL_DOMAIN+"/auth",routes.UserRoute)
 app.use(config.URL_DOMAIN+"/bootcamp",routes.CampDetailRoute)
+app.use(config.URL_DOMAIN+"/batch",routes.BatchRoute)
 
 
 //use middleware to handle error from others modules
